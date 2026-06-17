@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
@@ -19,6 +19,29 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+.portfolio-summary {
+  border: 1px solid #cfd6df;
+  background: #eef2f6;
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  margin: 1rem 0 1.5rem;
+  color: #212529;
+}
+.portfolio-summary h2 {
+  margin-top: 0;
+}
+.portfolio-summary dl {
+  display: grid;
+  grid-template-columns: minmax(7rem, max-content) 1fr;
+  gap: 0.45rem 0.9rem;
+  margin-bottom: 0;
+}
+.portfolio-summary dt {
+  font-weight: 700;
+}
+.portfolio-summary dd {
+  margin: 0;
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
@@ -83,16 +106,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar enlace de búsqueda",
+    "search-hide-matches-text": "Ocultar coincidencias adicionales",
+    "search-more-match-text": "coincidencia más en este documento",
+    "search-more-matches-text": "coincidencias más en este documento",
+    "search-clear-button-title": "Limpiar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Buscar",
+    "search-label": "Buscar"
   }
 }</script>
 <script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
@@ -198,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
   <li><a href="#segmentación-de-clientes" id="toc-segmentación-de-clientes" class="nav-link active" data-scroll-target="#segmentación-de-clientes"><span class="header-section-number">3.1</span> Segmentación de clientes</a>
@@ -232,6 +255,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 </header>
+
+<section class="portfolio-summary" aria-labelledby="resumen-portfolio-clusters">
+<h2 id="resumen-portfolio-clusters" class="anchored">Resumen del proyecto</h2>
+<dl>
+<dt>Objetivo</dt>
+<dd>Segmentar clientes de tarjetas de crédito para detectar grupos con comportamientos financieros similares.</dd>
+<dt>Datos</dt>
+<dd>Conjunto de clientes con variables de saldo, compras, pagos, límites de crédito y frecuencia de uso.</dd>
+<dt>Técnicas</dt>
+<dd>Limpieza de valores ausentes, transformación logarítmica, PCA, t-SNE, PAM, AGNES, Mean Shift y Spectral Clustering.</dd>
+<dt>Resultado</dt>
+<dd>PAM y AGNES ofrecen las segmentaciones más interpretables; el análisis sugiere 9 grupos como punto de partida.</dd>
+<dt>Mejora futura</dt>
+<dd>Añadir perfiles descriptivos de cada cluster para convertir los grupos en conclusiones de negocio más claras.</dd>
+</dl>
+</section>
 
 <section id="segmentación-de-clientes" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="segmentación-de-clientes"><span class="header-section-number">3.1</span> Segmentación de clientes</h2>
@@ -1144,7 +1183,7 @@ PURCHASES_INSTALLMENTS_FREQUENCY           CASH_ADVANCE_FREQUENCY
 <section id="conclusiones" class="level3" data-number="3.1.6">
 <h3 data-number="3.1.6" class="anchored" data-anchor-id="conclusiones"><span class="header-section-number">3.1.6</span> Conclusiones</h3>
 <p>Por lo visto anteriormente, si hemos de elegir un número de segmentaciones sería de 9. Además, los modelos que mejores resutlados nos han aportado han sido PAM y AGNES, métodos más sencillos que los dos últimos. A pesar de los resultados de spectral son resultados con menor cantidad de observaciones.</p>
-<p>Tal vez sean modelos complejos que necesiten de mayor cantidad de datos para generar resultados decentes. Incluso necesitraíamos mayor potencia pues hemos tenido que reducir el número de observaciones para poder realizar spectral_clusteering</p>
+<p>Tal vez sean modelos complejos que necesiten mayor cantidad de datos para generar resultados sólidos. Incluso necesitaríamos mayor potencia de cálculo, pues hemos tenido que reducir el número de observaciones para poder realizar spectral clustering.</p>
 
 
 </section>

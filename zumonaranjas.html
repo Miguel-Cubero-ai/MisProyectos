@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
@@ -19,6 +19,29 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+.portfolio-summary {
+  border: 1px solid #cfd6df;
+  background: #eef2f6;
+  border-radius: 6px;
+  padding: 1rem 1.1rem;
+  margin: 1rem 0 1.5rem;
+  color: #212529;
+}
+.portfolio-summary h2 {
+  margin-top: 0;
+}
+.portfolio-summary dl {
+  display: grid;
+  grid-template-columns: minmax(7rem, max-content) 1fr;
+  gap: 0.45rem 0.9rem;
+  margin-bottom: 0;
+}
+.portfolio-summary dt {
+  font-weight: 700;
+}
+.portfolio-summary dd {
+  margin: 0;
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
@@ -83,16 +106,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar enlace de búsqueda",
+    "search-hide-matches-text": "Ocultar coincidencias adicionales",
+    "search-more-match-text": "coincidencia más en este documento",
+    "search-more-matches-text": "coincidencias más en este documento",
+    "search-clear-button-title": "Limpiar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Buscar",
+    "search-label": "Buscar"
   }
 }</script>
 
@@ -176,7 +199,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
   <li><a href="#en-qué-tienda-se-compraron-los-zumos" id="toc-en-qué-tienda-se-compraron-los-zumos" class="nav-link active" data-scroll-target="#en-qué-tienda-se-compraron-los-zumos"><span class="header-section-number">5.1</span> ¿En qué tienda se compraron los zumos?</a>
@@ -213,6 +236,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 </header>
+
+<section class="portfolio-summary" aria-labelledby="resumen-portfolio-zumo">
+<h2 id="resumen-portfolio-zumo" class="anchored">Resumen del proyecto</h2>
+<dl>
+<dt>Objetivo</dt>
+<dd>Comparar modelos de clasificación para predecir en qué tienda se compraron zumos de naranja.</dd>
+<dt>Datos</dt>
+<dd>Datos comerciales de zumos con variables de precio, marca, promociones y características asociadas a la compra.</dd>
+<dt>Técnicas</dt>
+<dd>Validación cruzada, LDA, QDA, KNN, regresión logística, árboles, Random Forest y SVM.</dd>
+<dt>Resultado</dt>
+<dd>El proyecto permite comparar de forma práctica el rendimiento de varios clasificadores sobre el mismo problema.</dd>
+<dt>Mejora futura</dt>
+<dd>Añadir una tabla final con el ranking de modelos y explicar qué variables influyen más en la decisión.</dd>
+</dl>
+</section>
 
 <section id="en-qué-tienda-se-compraron-los-zumos" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="en-qué-tienda-se-compraron-los-zumos"><span class="header-section-number">5.1</span> ¿En qué tienda se compraron los zumos?</h2>

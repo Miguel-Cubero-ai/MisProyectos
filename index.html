@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.450">
@@ -20,6 +20,29 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+.project-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  margin: 1rem 0 1.5rem;
+}
+.project-card {
+  border: 1px solid #cfd6df;
+  border-radius: 6px;
+  padding: 1rem;
+  background: #eef2f6;
+}
+.project-card h3 {
+  margin-top: 0;
+}
+.project-tags {
+  color: #6c757d;
+  font-size: 0.92rem;
+  margin-bottom: 0.65rem;
+}
+.project-card a {
+  font-weight: 600;
 }
 </style>
 
@@ -49,16 +72,16 @@ ul.task-list li input[type="checkbox"] {
   "type": "textbox",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar enlace de búsqueda",
+    "search-hide-matches-text": "Ocultar coincidencias adicionales",
+    "search-more-match-text": "coincidencia más en este documento",
+    "search-more-matches-text": "coincidencias más en este documento",
+    "search-clear-button-title": "Limpiar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Buscar",
+    "search-label": "Buscar"
   }
 }</script>
 
@@ -142,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+    <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
   <li><a href="#prólogo" id="toc-prólogo" class="nav-link active" data-scroll-target="#prólogo"><span class="header-section-number">1</span> Prólogo</a></li>
@@ -162,20 +185,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Autor</div>
     <div class="quarto-title-meta-contents">
              <p>Miguel Cubero Gómez </p>
           </div>
   </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
-  
-    
   </div>
   
 
@@ -185,7 +199,42 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="1"><span class="header-section-number">1</span> Prólogo</h1>
 <p>En este libro se recogen la mayoría de trabajos que he realizado en el ámbito de la ciencia de datos y la estadística.</p>
 <p>La mayoría de estos trabajos han sido realizados en las diversas asignaturas del Máster en Matemáticas salvo el TFG que fue realizado el último curso del Grado en Matemáticas. Todos estos trabajos los he realizado en la Universidad de Valladolid a lo largo del 2023 y del 2024.</p>
-<p>Gran parte de estos trabajos han sido resueltos en R salvo los que así estén indicados. El código de estos otros trabajos se encuentra también en el archivo comprimido.</p>
+<p>Gran parte de estos trabajos han sido resueltos en R salvo los que así estén indicados. En cada página se resume el objetivo, los datos utilizados, las técnicas aplicadas y el principal aprendizaje del proyecto.</p>
+<section id="proyectos-destacados" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="proyectos-destacados">Proyectos destacados</h2>
+<div class="project-grid">
+<article class="project-card">
+<h3 class="anchored">Análisis Exploratorio de Datos</h3>
+<p class="project-tags">EDA · Kepler · clasificación de exoplanetas</p>
+<p>Estudio del conjunto KOI de la NASA para comprender variables, valores ausentes y estructura previa a modelos de clasificación.</p>
+<p><a href="./EDA.html">Ver proyecto</a></p>
+</article>
+<article class="project-card">
+<h3 class="anchored">Segmentación de clientes</h3>
+<p class="project-tags">Clustering · PCA · t-SNE · tarjetas de crédito</p>
+<p>Comparación de métodos de agrupamiento para identificar perfiles de clientes a partir de datos financieros.</p>
+<p><a href="./clusters.html">Ver proyecto</a></p>
+</article>
+<article class="project-card">
+<h3 class="anchored">Predicción de lluvia en Australia</h3>
+<p class="project-tags">Clasificación · meteorología · Random Forest</p>
+<p>Proyecto completo de predicción supervisada con análisis de datos, transformación de variables y evaluación de modelos.</p>
+<p><a href="./Rainprediction.html">Ver proyecto</a></p>
+</article>
+<article class="project-card">
+<h3 class="anchored">Validación cruzada en modelos</h3>
+<p class="project-tags">LDA · QDA · KNN · regresión logística</p>
+<p>Comparación de clasificadores para predecir la tienda de compra de zumos de naranja a partir de variables comerciales.</p>
+<p><a href="./zumonaranjas.html">Ver proyecto</a></p>
+</article>
+<article class="project-card">
+<h3 class="anchored">TFG</h3>
+<p class="project-tags">Teoría de la información · divergencias · histogramas</p>
+<p>Trabajo de fin de grado orientado al estudio de medidas de divergencia y su aplicación a comparación de distribuciones.</p>
+<p><a href="./TFG.html">Ver proyecto</a></p>
+</article>
+</div>
+</section>
 
 
 </section>
